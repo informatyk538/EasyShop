@@ -1,0 +1,111 @@
+<!--
+# Copyright (C) [2025] [Adam Kołoszycz]
+#
+# This file is part of [EasyShop].
+#
+# [EasyShop] is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# [EasyShop] is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with [EasyShop].  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel administracyjny</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #2196F3;
+        }
+        form {
+            margin: 20px auto;
+            max-width: 500px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form input, form button {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #1976D2;
+        }
+        .product-list {
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        .product-item img {
+            max-width: 80px;
+            max-height: 80px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Panel administracyjny</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Nazwa produktu" required>
+        <input type="number" name="price" placeholder="Cena" step="0.01" required>
+        <input type="file" name="image_file" accept="image/*" required>
+        <button type="submit">Dodaj produkt</button>
+    </form>
+
+    <div class="product-list">
+        <h2>Lista produktów</h2>
+        {% for product in products %}
+        <div class="product-item">
+            <div>
+                <img src="{{ product[3] }}" alt="Produkt">
+                <strong>{{ product[1] }}</strong> - {{ product[2] }} PLN
+            </div>
+            <form method="POST" style="margin: 0;">
+                <button type="submit" name="delete" value="{{ product[0] }}">Usuń</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
