@@ -1,0 +1,28 @@
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the LICENSE.TXT file for details.
+
+===POCZĄTEK====
+
+pip install -r requriements.txt
+
+domyślnie użytkownik to:
+nazwa: admin
+hasło: super_secure_password
+
+najlepiej przed pierwszym uruchomieniem usuń plik shop.db (w taki sposób usuniesz domyślnego użytkownika)
+(użytkownik utworzy się nowy po uruchomieniu backend.py)
+w pliku backend.py w ostatniej linijce kodu zmień host i port na własne ustawienie.
+
+Następnie uruchom plik backend.py, jeśli usunąłeś plik shop.db możesz dodać użytkownika, najpierw w kodzie pliku add_user.py w
+ostatniej linijce zmień nazwę użytkownika i hasło na własne ustawienie. Potem uruchom plik add_user.py, on doda użytkownika i 
+hasło do pliku shop.db.
+
+====DODAWANIE I USUWANIE OFERT====
+
+gdy aby wejść na stronę admina musisz wpisać \admin po adresie swojej strony sklepu, np "http:\\127.0.0.1\admin"
+tam najpierw odwiedzi cię strona logowania gdzie musisz użyć swojej nazwy użytkownika oraz hasła, po zalogowaniu się zobaczysz
+stronę do dodawania i usuwania ofert która jest na tyle prosta że poradzi sobie na niej nawet twoja babcia nie radząca sobie bez
+ciebie z obsługą komputera.
+
+to wszystko, wszystkiego dobrego!

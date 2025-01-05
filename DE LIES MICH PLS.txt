@@ -1,0 +1,29 @@
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the LICENSE.TXT file for details.
+
+
+===BEGINN====
+
+pip install -r requirements.txt
+
+Standardmäßig ist der Benutzer: Benutzername: admin Passwort: super_secure_password
+
+Es wird empfohlen, die Datei shop.db vor dem ersten Start zu löschen (dies entfernt den Standardbenutzer). 
+(Der Benutzer wird beim Start von backend.py neu erstellt). 
+Ändern Sie im backend.py-Datei die Host- und Port-Einstellungen in der letzten Codezeile auf Ihre eigenen Einstellungen.
+
+Führen Sie dann die Datei backend.py aus. Wenn Sie die Datei shop.db gelöscht haben, können Sie einen Benutzer hinzufügen. 
+Ändern Sie zuerst im add_user.py-Code in der letzten Zeile den Benutzernamen und das Passwort auf Ihre eigenen Einstellungen. 
+Führen Sie dann die Datei add_user.py aus. Sie fügt den Benutzer und das Passwort in die Datei shop.db ein.
+
+====HINZUFÜGEN UND ENTFERNEN VON ANGEBOTEN====
+
+Um zur Admin-Seite zu gelangen, müssen Sie \admin an die Adresse Ihrer Shop-Seite anhängen, z. B. "http://127.0.0.1/admin". 
+Dort wird zuerst die Login-Seite angezeigt, auf der Sie Ihren Benutzernamen und Ihr Passwort eingeben müssen. 
+Nach dem Login sehen Sie die Seite zum Hinzufügen und Entfernen von Angeboten, die so einfach ist, 
+dass sogar Ihre Großmutter, die ohne Sie keinen Computer benutzen kann, damit zurechtkommt.
+
+Das war's, alles Gute!
+
+Grüße aus Polen

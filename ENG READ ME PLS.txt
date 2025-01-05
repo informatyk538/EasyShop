@@ -1,0 +1,28 @@
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the LICENSE.TXT file for details.
+
+===BEGIN====
+
+pip install -r requirements.txt
+
+By default, the user is: username: admin password: super_secure_password
+
+It is recommended to delete the shop.db file before the first run (this will remove the default user). 
+(The user will be created anew when running backend.py). 
+In the backend.py file, change the host and port in the last line of code to your own settings.
+
+Next, run the backend.py file. If you have deleted the shop.db file, you can add a user. First, in the add_user.py file, 
+change the username and password in the last line of code to your desired settings. Then, run the add_user.py file. 
+It will add the user and password to the shop.db file.
+
+====ADDING AND REMOVING OFFERS====
+
+To access the admin page, you need to enter \admin after the address of your store's page, e.g., "http://127.0.0.1/admin". 
+There, you will first be greeted by the login page, where you must enter your username and password. 
+After logging in, you will see the page for adding and removing offers, 
+which is simple enough for even your grandmother, who struggles with using a computer without you, to handle.
+
+That's all, best wishes!
+
+Greetings from Poland
